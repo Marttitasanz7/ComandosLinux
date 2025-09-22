@@ -94,28 +94,32 @@ pstree -p
     
 10. Lanza el comando `ping` contra `google.com` en segundo plano (&) y obtén su identificador de proceso (PID).
 ```bash
-ping 8.8.8.8
+oing google.com > &
+ping www.google.com + alt y entramos en tty y nos volvemos a logger
+ps -aux | grep ping
+ps -aux | head
+ps -aux | head n-1
 echo $!      
 ```
     
 11. Finaliza el proceso de Firefox usando su PID.
 ```bash
 pgrep firefox            
-kill -TERM <PID>         
+kill -9 <PID>         
 
-kill -KILL <PID>         # forzado
 ```
     
 12. Vuelve a lanzarlo y esta vez deténlo, luego reactívalo.
 ```bash
 
-kill -STOP <PID>        
-sleep 2
+kill -19 <PID>        
+
 kill -CONT <PID>        
 ```
     
 13. Crea un script que capture la señal de interrupción (Ctrl+C) y muestre un mensaje en lugar de cerrarse.
 ```bash
+
 
 
 ```
